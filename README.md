@@ -13,7 +13,37 @@ Adapted from: https://github.com/JohnLangford/vowpal_wabbit/wiki/Loss-functions
 
 
 ## Optimization 
-* If we have a high learning rate, SGD has ig steps and jumps back and forth. 
+* If we have a high learning rate, (basic) SGD has big steps and it is progressing fast. Solution: use decaying learning rate; ADAM and such.  
 
 ![Learning rate too high](https://raw.githubusercontent.com/spartonia/MLNotes/master/static/lrate.png "Spikes in Accuracy: high learning rate")
+
+
+## Regularization
+#### Overfitting:
+Causes: 
+* Too many neurons
+* Not enough data 
+* Bad network 
+
+To cure overfitting: 
+* Dropout (note: some noise may come back. Not recommended with conv nets.)
+* Data augmentation(add noise to data) 
+
+#### Batch normalization 
+Data in real world: large values, different scales, skewed, correlated
+
+Solution:
+1. Data whitening:
+  * Scale: center around zero 
+  * Decorrelate: (A+B)/2, A-B (PCA etc) 
+  * Add an additional layer and let NN do it (to determine what the clean data is)
+2. Batch normalization (better option) 
+   * Works better than whitening 
+   * How to: 
+![Batch Normalization](https://raw.githubusercontent.com/spartonia/MLNotes/master/static/batchNormalization.png "Batch Normalization done right")
+
+Note: 
+* with batch normalization, bete replace bias so don't use bias when batch normalizing. 
+* you can use higher lrate 
+* stop using (or do a little) dropout 
 
