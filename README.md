@@ -33,10 +33,12 @@ To cure overfitting:
 Data in real world: large values, different scales, skewed, correlated
 
 Solution:
+
 1. Data whitening:
    * Scale: center around zero 
    * Decorrelate: (A+B)/2, A-B (PCA etc) 
    * Add an additional layer and let NN do it (to determine what the clean data is)
+
 2. Batch normalization (better option) 
    * Works better than whitening 
    * How to: 
