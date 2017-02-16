@@ -15,5 +15,5 @@ Adapted from: https://github.com/JohnLangford/vowpal_wabbit/wiki/Loss-functions
 # Optimization 
 * If we have a high learning rate, SGD has ig steps and jumps back and forth. 
 
-![Learning rate too high](https://github.com/spartonia/MLNotes/static/lrate.png "Spikes in Accuracy: high learning rate")
+![Learning rate too high](https://raw.githubusercontent.com/spartonia/MLNotes/master/static/lrate.png "Spikes in Accuracy: high learning rate")
 
