@@ -1,6 +1,8 @@
 # MLNotes
 Notes on using/applying machine learning 
 
+## Data Cleaning 
+* [A simple way](http://www.kdnuggets.com/2017/02/removing-outliers-standard-deviation-python.html) to deal with outliers python 
 
 ## Loss Functions 
 * Squared loss minimizes expectation. Pick it when learning expected return on a stock.
