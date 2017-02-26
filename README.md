@@ -4,6 +4,12 @@ Notes on using/applying machine learning
 ## Data Cleaning 
 * [A simple way](http://www.kdnuggets.com/2017/02/removing-outliers-standard-deviation-python.html) to deal with outliers python 
 
+## Feature Engineering
+* *Numerical:* log, log(1+x), normalization, binarization 
+* *Categorical:* one-hot encode, TF-IDF(text), weight of evidence 
+* *Timeseries:* stats, MFCC(audio), FFT
+* *Numerical/Timeseries* to categorical - RF/GBM
+
 ## Loss Functions 
 * Squared loss minimizes expectation. Pick it when learning expected return on a stock.
 * Logistic loss minimizes probability. Pick it when learning probability of click on advertisement.
