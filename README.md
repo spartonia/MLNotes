@@ -59,3 +59,6 @@ Note:
 * you can use higher lrate 
 * stop using (or do a little) dropout 
 
+
+# Useful links
+* [Must Know Tips/Tricks in Deep Neural Networks ](http://lamda.nju.edu.cn/weixs/project/CNNTricks/CNNTricks.html)
