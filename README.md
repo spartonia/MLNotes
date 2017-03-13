@@ -33,9 +33,14 @@ Adapted from: https://github.com/JohnLangford/vowpal_wabbit/wiki/Loss-functions
 #### Optimization
 * To sanity check the network, start witha very small data (20 images) and no regularization and overfit the model. You should be able to see `accuracy ~= 1` and `loss ~= 0` if everything is fine. 
 * If we have a high learning rate, (basic) SGD has big steps and it is progressing fast. Solution: use decaying learning rate; ADAM and such.  
+* decay lr overtime. 
 
 ![Learning rate too high](https://raw.githubusercontent.com/spartonia/MLNotes/master/static/lrate.png "Spikes in Accuracy: high learning rate")
 
+###### Hyperparamter optimization  
+1. Getting some ideas: in training, start with two extreme lrs (`1e-6`, `1e6`) and narrow it down by adjust it incremantally (binary search like) until the loss is declining in a sensible way (not staying flat, not exploding, no NaNs, exceptions etc).
+2. Fine tuning: [here](https://youtu.be/GUtlrDbHhJM?list=PLlJy-eBtNFt6EuMxFYRiNRS07MCWN5UIA&t=3961)
+3. Prefer random search over grid search. 
 
 #### Regularization
 ###### Overfitting:
