@@ -24,7 +24,9 @@ Notes on using/applying machine learning
 Adapted from: https://github.com/JohnLangford/vowpal_wabbit/wiki/Loss-functions
 
 ## Initialization 
-* If you are usin ReLu, it is god practice to initialize them with slightly positive bias to avoid dead neurons.
+* If you are usin ReLu, it is good practice to 
+   * initialize them with slightly positive bias to avoid dead neurons (small networks).
+   * Xavier-He initialization `W = np.random.rand(fan_in, fan_out) / np.sqrt(fan_in/2)` (recommended).
 
 ## Optimization 
 * If we have a high learning rate, (basic) SGD has big steps and it is progressing fast. Solution: use decaying learning rate; ADAM and such.  
