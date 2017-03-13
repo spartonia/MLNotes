@@ -14,7 +14,8 @@ Notes on using/applying machine learning
 * **Timeseries:** stats, MFCC(audio), FFT
 * **Numerical/Timeseries** to categorical - RF/GBM
 
-## Loss Functions 
+## Architecture 
+#### Loss Functions 
 * Squared loss minimizes expectation. Pick it when learning expected return on a stock.
 * Logistic loss minimizes probability. Pick it when learning probability of click on advertisement.
 * Hinge loss minimizes the 0,1 / yes-no question. Pick it when you want a hard prediction.
@@ -23,19 +24,21 @@ Notes on using/applying machine learning
 
 Adapted from: https://github.com/JohnLangford/vowpal_wabbit/wiki/Loss-functions
 
-## Initialization 
+#### Initialization 
 * If you are usin ReLu, it is good practice to 
    * initialize them with slightly positive bias to avoid dead neurons (small networks).
    * Xavier-He initialization `W = np.random.rand(fan_in, fan_out) / np.sqrt(fan_in/2)` (recommended).
 
-## Optimization 
+## Training 
+#### Optimization
+* To sanity check the network, start witha very small data (20 images) and no regularization and overfit the model. You should be able to see `accuracy ~= 1` and `loss ~= 0` if everything is fine. 
 * If we have a high learning rate, (basic) SGD has big steps and it is progressing fast. Solution: use decaying learning rate; ADAM and such.  
 
 ![Learning rate too high](https://raw.githubusercontent.com/spartonia/MLNotes/master/static/lrate.png "Spikes in Accuracy: high learning rate")
 
 
-## Regularization
-#### Overfitting:
+#### Regularization
+###### Overfitting:
 Causes: 
 * Too many neurons
 * Not enough data 
@@ -45,7 +48,7 @@ To cure overfitting:
 * Dropout (note: some noise may come back. Not recommended with conv nets.)
 * Data augmentation(add noise to data) 
 
-#### Batch normalization 
+###### Batch normalization 
 Data in real world: large values, different scales, skewed, correlated
 
 Solution:
@@ -57,6 +60,7 @@ Solution:
 
 2. Batch normalization (better option) 
    * Works better than whitening 
+   * Usually insterted after a FC/CL and a non linerity: .. FC -> BN -> Tanh -> FC -> BN -> Tanh -> ..
    * How to: 
 ![Batch Normalization](https://raw.githubusercontent.com/spartonia/MLNotes/master/static/batchNormalization.png "Batch Normalization done right")
 
