@@ -74,6 +74,10 @@ Note:
 * you can use higher lrate 
 * stop using (or do a little) dropout 
 
+#### Ensamble
+* Ensambling independant models increases the accuracy ~2% 
+* You can also ensamble saved checkpoints of a model
+
 
 # Useful links
 * [Must Know Tips/Tricks in Deep Neural Networks ](http://lamda.nju.edu.cn/weixs/project/CNNTricks/CNNTricks.html)
