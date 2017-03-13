@@ -1,10 +1,15 @@
 # MLNotes
 Notes on using/applying machine learning 
 
-## Data Cleaning 
+## Preprocessing 
+#### Normalizing 
+* **Images**
+   * Center (subtract the mean image or per channel mean)
+
+#### Data Cleaning 
 * [A simple way](http://www.kdnuggets.com/2017/02/removing-outliers-standard-deviation-python.html) to deal with outliers python 
 
-## Feature Engineering
+#### Feature Engineering
 * **Numerical:** log, log(1+x), normalization, binarization 
 * **Categorical:** one-hot encode, TF-IDF(text), weight of evidence 
 * **Timeseries:** stats, MFCC(audio), FFT
