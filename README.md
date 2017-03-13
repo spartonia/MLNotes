@@ -1,12 +1,11 @@
 # MLNotes
 Notes on using/applying machine learning 
 
-## Preprocessing 
-#### Normalizing 
-* **Images**
+## Preprocessing and Data Cleaning 
+* **Images (DL)**
    * Center (subtract the mean image or per channel mean)
+   * Not common to dp PCA, normalizing etc. 
 
-#### Data Cleaning 
 * [A simple way](http://www.kdnuggets.com/2017/02/removing-outliers-standard-deviation-python.html) to deal with outliers python 
 
 #### Feature Engineering
