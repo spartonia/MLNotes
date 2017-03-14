@@ -10,3 +10,7 @@ A Convolution layer
    * `W2 = (W1 - F + 2P)/S + 1`
    * `H2 = (H2 - F + 2P)/S + 1`
    * `D2 = K`
+   
+Tips/Tricks
+-----------
+* GoogLeNet removed the final FC layers (which are the most memory-heavy parts). One way to reduce the number/size of FC layers is that use the average of final Conv filters instead of using all cells. For instance, if you have a final conv layer of `7x7x256`, you can avergave them to `1x256` (`7x7` size of each filter) and connect it to a FC layer. 
