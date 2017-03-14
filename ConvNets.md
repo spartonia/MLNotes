@@ -14,3 +14,8 @@ A Convolution layer
 Tips/Tricks
 -----------
 * GoogLeNet removed the final FC layers (which are the most memory-heavy parts). One way to reduce the number/size of FC layers is that use the average of final Conv filters instead of using all cells. For instance, if you have a final conv layer of `7x7x256`, you can avergave them to `1x256` (`7x7` size of each filter) and connect it to a FC layer. 
+* Trend towards smaller filters and deeper architectures 
+* Typical architecture
+   * `[(conv-relu)xN-pool?]xM-(FC-relu)xK,softmax` where `N~=5`, `M` is large, `0<=K<=2`.
+   * But ResNet/GoogLeNet challenge this paradigm.
+   
