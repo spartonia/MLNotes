@@ -78,6 +78,13 @@ Note:
 * Ensambling independant models increases the accuracy ~2% 
 * You can also ensamble saved checkpoints of a model
 
+# Choosing a Deep Learning library
+* Feature extracting / fine tuning existing network: **Caffe** 
+* Cpmplex uses of pretrained models: **Lassagne** or **Torch**
+* Write your own layers: **Torch** 
+* Crazy RNNs: **Theano** or **Tensorflow** 
+* Huge model, need parallelism: **Tensorflow** 
+
 
 # Useful links
 * [Must Know Tips/Tricks in Deep Neural Networks ](http://lamda.nju.edu.cn/weixs/project/CNNTricks/CNNTricks.html)
