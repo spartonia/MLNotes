@@ -18,6 +18,7 @@ Tips/Tricks
 * Typical architecture
    * `[(conv-relu)xN-pool?]xM-(FC-relu)xK,softmax` where `N~=5`, `M` is large, `0<=K<=2`.
    * But ResNet/GoogLeNet challenge this paradigm.
+* Using 32bit floating point precision (`float32`) instead of 64 will speedup things in convolution. 
    
 **Data Augmentation**
 Is simple to use, use it. 
