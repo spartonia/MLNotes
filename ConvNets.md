@@ -37,8 +37,8 @@ A genaral theme:
    * **Training:** Add random noise 
    * **Testing:** Marginalize over random noise 
    
-** Transfer Learning**
-Main advantage: You dont need many data to train CNNs 
+**Transfer Learning** 
+Aka CNNs without huge data.  
 1. Take and download a favorite CNN architecture
 2. Depending on the size of your dataset, pick some layers on top and retrain the network. 
 ![Transfer Learning](https://raw.githubusercontent.com/spartonia/MLNotes/master/static/transferLearning.png "Transfer learning guide.")
