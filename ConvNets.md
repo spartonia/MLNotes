@@ -39,7 +39,10 @@ A genaral theme:
 ** Transfer Learning**
 Main advantage: You dont need many data to train CNNs 
 1. Take and download a favorite CNN architecture
-2. Depending on the size of your dataset, pick some layers on top. 
+2. Depending on the size of your dataset, pick some layers on top and retrain the network. 
 ![Transfer Learning](https://raw.githubusercontent.com/spartonia/MLNotes/master/static/transferLearning.png "Transfer learning guide.")
+
+![Transfer Learning How to](https://raw.githubusercontent.com/spartonia/MLNotes/master/static/TransferLearningHowto.png "Transfer learning guide 2.")
+
       
    
