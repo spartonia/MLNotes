@@ -19,3 +19,25 @@ Tips/Tricks
    * `[(conv-relu)xN-pool?]xM-(FC-relu)xK,softmax` where `N~=5`, `M` is large, `0<=K<=2`.
    * But ResNet/GoogLeNet challenge this paradigm.
    
+**Data Augmentation**
+Is simple to use, use it. 
+   * Horizontal flip 
+   * Random crops (a patch and resize)
+      * Note: During test time, use a subset of these crops to calculate the loss instead of using the (whole) original image. 
+   * Color jittering (change the colors a bit). There is a recommended way to do it using PCA. 
+   * Get creative
+      * Translation
+      * Rotations
+      * Streching 
+      * Shearing
+      * etc 
+ 
+A genaral theme: 
+   * **Training:** Add random noise 
+   * **Testing:** Marginalize over random noise 
+   
+** Transfer Learning**
+Main advantage: You dont need many data to train CNNs 
+1. Take and download a favorite CNN architecture
+      
+   
