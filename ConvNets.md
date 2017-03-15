@@ -44,5 +44,11 @@ Main advantage: You dont need many data to train CNNs
 
 ![Transfer Learning How to](https://raw.githubusercontent.com/spartonia/MLNotes/master/static/TransferLearningHowto.png "Transfer learning guide 2.")
 
+**Stacking convolutions**
+* Replace large convolutions (`5x5, 7x7`) convolutions with multiple `3x3` ones. 
+* `1x1` *bottleneck* convolutions are are very efficient (kep them in mind) 
+* Can factor `NxN` convolutions into `1xN` and `Nx1`
+* All of above give less parameters, less compute and more non-linearity. 
+
       
    
